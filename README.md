@@ -1,5 +1,5 @@
 # 📌 Project Overview
-. This project analyzes the relationship between First-Mile Distance (driver-to-restaurant) and Order Assignment Latency to identify bottlenecks in the delivery dispatch lifecycle. By analyzing thousands of data points for both delivered and cancelled orders, the study aims to optimize driver dispatching logic and reduce order churn.
+. This project analyzes the relationship between Riders Order Deliveries at different stages of a Order Delivery Cycle to identify bottlenecks in the delivery dispatch lifecycle. By analyzing thousands of data points for both delivered and cancelled orders, the study aims to optimize driver dispatching logic, reduce order churn and making Order Delivery Efficient.
 
 # 📊 Key Insights & Analytics
 
