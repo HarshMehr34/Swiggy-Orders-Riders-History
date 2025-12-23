@@ -24,26 +24,24 @@
 
 > Reassignment Mechanics: 2.5% of orders require reassignment, with the vast majority (97.5%) being fulfilled by the first allotted rider. The most common reason for reassignment is "Rider Inaction," which triggers an Automatic Reassignment flow.
 
-🛠 Tech Stack
-Data Manipulation: Python, Pandas, NumPy
-
-Visualization: Matplotlib, Seaborn (Scatter plots, Pie charts, Bar plots, Line plots)
-
-Feature Engineering: Time-delta calculations (Latency in seconds), Time-of-day binning (Morning/Afternoon/Evening), and Experience-based segmenting.
 # 🛠 Tech Stack
-. Language: Python
+> Data Manipulation: Python, Pandas, NumPy
+> Visualization: Matplotlib, Seaborn (Scatter plots, Pie charts, Bar plots, Line plots)
+> Feature Engineering: Feature Creation, Time-delta calculations (Latency in seconds), Time-of-day binning (Morning/Afternoon/Evening), and Experience-based segmenting.
 
-. Libraries: Pandas (Data Wrangling), Matplotlib/Seaborn (Visualization), NumPy
 
-. Analysis Techniques: Scatter Plot Density Analysis, Latency Distribution, Geospatial Constraint Identification.
+# 💡 Business Recommendations
+> Recommendation: Implement Dynamic Geofencing. This keeps riders closer to restaurants, reducing the "Pickup Latency" by reducing first-mile-distance for riders that leads to customer cancellations.
 
-# 📈 Visualizations
+> Recommendation: Prioritize "Power Riders" for complex, high-value order batches. Since they have higher efficiency, they can handle the "long-distance" assignments that would normally cause a newer rider to cancel or delay.
 
-💡 Business Recommendations
-Dynamic Radius: Implement a dynamic first-mile radius that expands from 4 to 5 units during low-supply periods to capture more orders.
+> Recommendation: Introduce a "Shift-Starter Bonus." Since acceptance rates increase as session time increases, we can offer a incentive for completing the first 3 or 4 orders within a certain timeframe to reduce early-session cancellations.
 
-Predictive Re-assignment: Orders not assigned within 120 seconds should be flagged for "Priority Dispatch" to prevent them from entering the high-latency churn zone.
+> Recommendation: Reduce the "Auto-Reassignment" timer. If a rider shows no movement toward a restaurant within 120 seconds of acceptance (instead of waiting for "Inaction"), the system should proactively ping the rider or trigger a "Shadow Reassignment" to find a backup.
 
+> Recommendation: Introduce a "Friday Saturday Bonus" to offer a incentive for completing each order delivery so Newer Riders also start taking nearby Order Deliveries leading to higher riders availability and Order Assignment.
 
 # Data Cleaning:
-. Add a small section in your README or Notebook about how you handled outliers or null values. In real-world data jobs, cleaning is 80% of the work.
+> Dealing with NULL Values: Fixed the Error Data by removing the NULL values, replacing the NULL values with Mode, Median Imputation.
+> Dealing With Outliers: Dealt with Outliers using IQR(Inter Quartile Range) Method and Understanding the Skewness the data for using Imputation Techniques.
+> Dealing with DataType and Duplicate Values: Understanding the Data and changing the Data Type Accordingly and Removing or keeping the Duplicates accordingly.
